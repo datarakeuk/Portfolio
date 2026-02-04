@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Top Companies Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #FAF8F9;
+    }
+    
+    header {
+      padding: 0.25rem 0.25rem;
+      text-align: center;
+      background: #300019;
+      color: white;
+      position: relative;
+    }
+    header h1 {
+      margin: 0.25rem 0;
+    }
+    header h4 {
+      margin: 0.25rem 0;
+    }
+    
+    header a {
+      color: white;
+      text-decoration: underline;
+    }
+    
+    header a:hover {
+      color: #f0f0f0;
+    }
+    
+    .home-button {
+      position: absolute;
+      top: 50%;
+      right: 1rem;
+      transform: translateY(-50%);
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border: 2px solid white;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    
+    .home-button:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  
+    .content-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    
+    .intro-text {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .split-section {
+      display: flex;
+      gap: 2rem;
+      padding: 2rem 1rem;
+    }
+    
+    .left-column, .right-column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+    
+    .image-container {
+      width: 80%;
+      max-width: 400px;
+    }
+    
+    .image-container img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    
+    .image-container p {
+      text-align: center;
+      margin-top: 0.5rem;
+      color: #300019;
+      font-weight: bold;
+    }
+    
+    .image-link {
+      display: block;
+      text-decoration: none;
+    }
+    
+    .image-link:hover img {
+      box-shadow: 0 0 20px 5px rgba(48, 0, 25, 0.6);
+      transform: scale(1.02);
+    }
+    
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Top Companies Dashboard</h1>
+    <p>Transport/Logistics/CRM/Financial</p>
+    <a href="../../../index.html" class="home-button">Home</a>
+  </header>
+  
+  <div class="content-wrapper">
+    <div class="intro-text">
+      <h2>Welcome to My Portfolio</h2>
+      <p>This area is reserved for a brief description of the visual.</p>
+      <p>This area is reserved for a brief analysis of the visual.</p>
+    </div>
+  </div>
+  
+  <div class="split-section">
+    <div class="left-column">
+      <div class="image-container">
+	  <p>Access the live interactive Tableau Dashboard</p>
+        <a href="./Tableau/index.html" class="image-link">
+          <img src="../../../Common_Images/Tableau_logo.png" alt="Tableau Logo">
+        </a>
+        <p>Click to view</p>
+      </div>
+      <div class="image-container">
+        <img src="./Images/TopCompanies_Tableau_1.png" alt="Top 20">
+        <p>Top 20 Companies</p>
+      </div>
+	  <div class="image-container">
+        <img src="./Images/TopCompanies_Tableau_2.png" alt="Shipping Overview">
+        <p>Shipping Overview in Detail</p>
+      </div>
+    </div>
+    
+    <div class="right-column">
+      <div class="image-container">
+	  <p>Access the live interactive Power BI Dashboard</p>
+        <a href="./PowerBI/index.html" class="image-link">
+          <img src="../../../Common_Images/Power_BI_logo.png" alt="Power BI Logo">
+        </a>
+        <p>Click to view</p>
+      </div>
+      <div class="image-container">
+        <img src="./Images/TopCompanies_PowerBI_1.png" alt="Top 20">
+        <p>Top 20 Companies</p>
+      </div>
+	  <div class="image-container">
+        <img src="./Images/TopCompanies_PowerBI_2.png" alt="Shipping Overview">
+        <p>Shipping Overview in Detail</p>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
