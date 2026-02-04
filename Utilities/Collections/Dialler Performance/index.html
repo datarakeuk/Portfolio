@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Outbound Dialler Performance Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <style>
     body {
       margin: 0;
@@ -25,11 +24,16 @@
     header h4 {
       margin: 0.25rem 0;
     }
-    .page-wrapper {
-      display: flex;
-      justify-content: center;
-      padding: 2rem 1rem;
+    
+    header a {
+      color: white;
+      text-decoration: underline;
     }
+    
+    header a:hover {
+      color: #f0f0f0;
+    }
+    
     .home-button {
       position: absolute;
       top: 50%;
@@ -43,20 +47,128 @@
       font-weight: bold;
       transition: background-color 0.3s;
     }
+    
     .home-button:hover {
       background-color: rgba(255, 255, 255, 0.2);
     }
-
+  
+    .content-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    
+    .intro-text {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .split-section {
+      display: flex;
+      gap: 2rem;
+      padding: 2rem 1rem;
+    }
+    
+    .left-column, .right-column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+    
+    .image-container {
+      width: 80%;
+      max-width: 400px;
+    }
+    
+    .image-container img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    
+    .image-container p {
+      text-align: center;
+      margin-top: 0.5rem;
+      color: #300019;
+      font-weight: bold;
+    }
+    
+    .image-link {
+      display: block;
+      text-decoration: none;
+    }
+    
+    .image-link:hover img {
+      box-shadow: 0 0 20px 5px rgba(48, 0, 25, 0.6);
+      transform: scale(1.02);
+    }
+    
   </style>
 </head>
-
 <body>
   <header>
     <h1>Outbound Dialler Performance Dashboard</h1>
     <p>Collections/Debt Recovery</p>
-    <a href="https://datarakeuk.github.io/Portfolio/index.html" class="home-button">Home</a>
+    <a href="../../../index.html" class="home-button">Home</a>
   </header>
-<p>Select from Tableau or Power BI</p>
+  
+  <div class="content-wrapper">
+    <div class="intro-text">
+      <h2>Welcome to My Portfolio</h2>
+      <p>This area is reserved for a brief description of the visual.</p>
+      <p>This area is reserved for a brief analysis of the visual.</p>
+    </div>
+  </div>
+  
+  <div class="split-section">
+    <div class="left-column">
+      <div class="image-container">
+	  <p>Click below to access the live interactive Tableau Dashboard</p>
+        <a href="./Tableau/index.html" class="image-link">
+          <img src="../../../Common_Images/Tableau_logo.png" alt="Tableau Logo">
+        </a>
+        <p>Click to view</p>
+      </div>
+      <div class="image-container">
+        <img src="./Images/DiallerPerformance_Tableau_1.png" alt="Overall">
+        <p>Outbound Dialler Operational Performance - Overall</p>
+      </div>
+	  <div class="image-container">
+        <img src="./Images/DiallerPerformance_Tableau_2.png" alt="8 Week View">
+        <p>Outbound Dialler Operational Performance - 8 Week View</p>
+      </div>
+	  <div class="image-container">
+        <img src="./Images/DiallerPerformance_Tableau_3.png" alt="Hourly">
+        <p>Outbound Dialler Operational Performance - Hourly</p>
+      </div>
+    </div>
+    
+    <div class="right-column">
+      <div class="image-container">
+	  <p>Click below to access the live interactive Power BI Dashboard</p>
+        <a href="./PowerBI/index.html" class="image-link">
+          <img src="../../../Common_Images/PowerBI_logo.png" alt="Power BI Logo">
+        </a>
+        <p>Click to view</p>
+      </div>
+      <div class="image-container">
+        <img src="./Images/DiallerPerformance_PowerBI_1.png" alt="Overall">
+        <p>Outbound Dialler Operational Performance - Overall</p>
+      </div>
+	  <div class="image-container">
+        <img src="./Images/DiallerPerformance_PowerBI_2.png" alt="8 Week View">
+        <p>Outbound Dialler Operational Performance - 8 Week View</p>
+      </div>
+	  <div class="image-container">
+        <img src="./Images/DiallerPerformance_PowerBI_3.png" alt="Hourly">
+        <p>Outbound Dialler Operational Performance - Hourly</p>
+      </div>
+    </div>
+  </div>
   
 </body>
 </html>
