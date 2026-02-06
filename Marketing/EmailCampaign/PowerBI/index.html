@@ -12,11 +12,140 @@
       background-color: #FAF8F9;
     }
 
-    header {
-      padding: 1rem;
+     header {
+      padding: 0.25rem 0.25rem;
       text-align: center;
       background: #300019;
       color: white;
+      position: relative;
+    }
+    header h1 {
+      margin: 0.25rem 0;
+    }
+    header h4 {
+      margin: 0.25rem 0;
+    }
+    
+    header a {
+      color: white;
+      text-decoration: underline;
+    }
+    
+    header a:hover {
+      color: #f0f0f0;
+    }
+    
+    .home-button {
+      position: absolute;
+      top: 50%;
+      right: 1rem;
+      transform: translateY(-50%);
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border: 2px solid white;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    
+    .home-button:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  
+    .linkedin-button {
+      position: absolute;
+      top: 50%;
+      left: 1rem;
+      transform: translateY(-50%);
+      text-decoration: none;
+      display: block;
+    }
+    
+    /* Size the LinkedIn logo in header to match Home button height */
+    .linkedin-button img {
+      height: 2.2rem;
+      width: auto;
+      display: block;
+    }
+	  
+    .content-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0.5rem 1rem;
+    }
+    
+    .intro-text {
+      text-align: left;
+      margin-bottom: 3rem;
+    }
+    
+    /* Style for bullet points */
+    .intro-text ul {
+      margin-top: 1rem;
+      line-height: 1.8;
+    }
+    
+    .intro-text li {
+      margin-bottom: 1rem;
+    }
+    
+    /* Inline LinkedIn logo in text */
+    .inline-linkedin-link {
+      display: inline;
+      text-decoration: none;
+    }
+    
+    .inline-linkedin {
+      height: 1em;
+      width: auto;
+      vertical-align: middle;
+      margin: 0 0.2rem;
+      display: inline-block;
+    }
+    
+    .split-section {
+      display: flex;
+      gap: 2rem;
+      padding: 2rem 1rem;
+    }
+    
+    .left-column, .right-column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+    
+    .image-container {
+      width: 80%;
+      max-width: 400px;
+    }
+    
+    .image-container img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    
+    .image-container p {
+      text-align: center;
+      margin-top: 0.5rem;
+      color: #300019;
+      font-weight: bold;
+    }
+    
+    .image-link {
+      display: block;
+      text-decoration: none;
+    }
+    
+    .image-link:hover img {
+      box-shadow: 0 0 20px 5px rgba(48, 0, 25, 0.6);
+      transform: scale(1.02);
     }
 
     .dashboard-container {
@@ -27,7 +156,7 @@
     .page-wrapper {
       display: flex;
       justify-content: center;
-      padding: 2rem 1rem;
+      padding: 0.5rem 0.5rem;
     }
     
     .dashboard-wrapper {
@@ -53,17 +182,41 @@
 <body>
   <header>
     <h1>Email Campaign Performance Dashboard</h1>
-    <p>Interactive Power BI Visualization</p>
+    <p>Interactive Power BI Visualization - Analysis Below</p>
+    <a href="../../../index.html" class="home-button">Home</a>
+    <a href="https://www.linkedin.com/in/damian-oconnor" class="linkedin-button"><img src="../../../Common_Images/LinkedIn_logo.png" alt="Contact me"></a>
   </header>
 
   <div class="page-wrapper">  
     <div class="dashboard-wrapper">
       <iframe
-        src="https://app.powerbi.com/view?r=eyJrIjoiOGJlZTUyNWUtY2UzNy00YTllLTgwMmQtMmJiNTkxMmZlYmY0IiwidCI6Ijc3NWRjN2U0LWI1YjktNDMzZi1iMWI1LTZhZjQ2NDQ1ZDBjNSJ9" 
+         src="https://app.powerbi.com/view?r=eyJrIjoiOGJlZTUyNWUtY2UzNy00YTllLTgwMmQtMmJiNTkxMmZlYmY0IiwidCI6Ijc3NWRjN2U0LWI1YjktNDMzZi1iMWI1LTZhZjQ2NDQ1ZDBjNSJ9" 
         frameborder="0" 
         allowFullScreen="true">
       </iframe>
     </div>  
   </div>
+   <div class="content-wrapper">
+    <div class="intro-text">
+      <h4>Brief description</h4>
+      <p>This marketing email campaign dashboard shows a very high level overview of all campaigns sent during the month, for a 3 month period, for each global region, allowing immediate comparison of open and click rates, to see which campaigns are performing well and which need more attention in future.</p>
+      <h4>Points to note</h4>
+      <p>Campaign names have been kept in a style a business would normally use, which is meaningful within the team, but not necessarily outside of that.</p>
+      <h4>Brief analysis overview</h4>
+      <p>Using January 2026 as a basis for analysis:</p>
+      <ul>
+        <li>The abandoned basket campaign, for UK & Ireland, has performed considerably higher than expectations, with an open rate of 58.3%, against a target of 26.4% and a click through rate of 12.3%, against a 2.6% target. This suggests that, as one of the highest open rates across the mailings, it has triggered the potential customer to open the mailing due to its wording or timing and created a much higher call to action than any other mailing. Further mailings of this type should be attempted, revising the targets and testing different creatives and timings against the booking process.</li>
+        
+        <li>The Infrequent High Value mailing performed poorly, achieving an open rate of 37.8%, 4.4% below expectations and a click through rate of just 2.6%. Due to the nature of the demographic in this mailing, it is a challenging mailing to perform well, however testing different subject lines might improve the performance and a complete overhaul of the content and creative is needed to entice the customers back.</li>
+        
+        <li>Looking at European campaigns, the “EU QNB”, Quote not booked mailing has performed exceptionally well, with a 73.1% open rate (24% target) and 10% click rate (4% target). This reminder email is a win for retaining customers that have potentially been shopping around for a better price. While it could be said that they would have booked regardless, given they were offered the best price here, the creative could be offering incentives to win the booking. Further testing using a control group is highly recommended.</li>
+        
+      </ul>
+	  <br>
+		Deeper analysis, including significance testing, strategy creation, customer profiling and improving customer engagement, among others, can be obtained by contacting me directly: <a href="https://www.linkedin.com/in/damian-oconnor" class="inline-linkedin-link"><img src="../../Common_Images/LinkedIn_logo.png" alt="Contact me" class="inline-linkedin"></a>.</li>
+
+    </div>
+  </div>
+  
 </body>
 </html>
