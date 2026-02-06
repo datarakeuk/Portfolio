@@ -12,11 +12,140 @@
       background-color: #FAF8F9;
     }
 
-    header {
-      padding: 1rem;
+     header {
+      padding: 0.25rem 0.25rem;
       text-align: center;
       background: #300019;
       color: white;
+      position: relative;
+    }
+    header h1 {
+      margin: 0.25rem 0;
+    }
+    header h4 {
+      margin: 0.25rem 0;
+    }
+    
+    header a {
+      color: white;
+      text-decoration: underline;
+    }
+    
+    header a:hover {
+      color: #f0f0f0;
+    }
+    
+    .home-button {
+      position: absolute;
+      top: 50%;
+      right: 1rem;
+      transform: translateY(-50%);
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border: 2px solid white;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    
+    .home-button:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  
+    .linkedin-button {
+      position: absolute;
+      top: 50%;
+      left: 1rem;
+      transform: translateY(-50%);
+      text-decoration: none;
+      display: block;
+    }
+    
+    /* Size the LinkedIn logo in header to match Home button height */
+    .linkedin-button img {
+      height: 2.2rem;
+      width: auto;
+      display: block;
+    }
+	  
+    .content-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0.5rem 1rem;
+    }
+    
+    .intro-text {
+      text-align: left;
+      margin-bottom: 3rem;
+    }
+    
+    /* Style for bullet points */
+    .intro-text ul {
+      margin-top: 1rem;
+      line-height: 1.8;
+    }
+    
+    .intro-text li {
+      margin-bottom: 1rem;
+    }
+    
+    /* Inline LinkedIn logo in text */
+    .inline-linkedin-link {
+      display: inline;
+      text-decoration: none;
+    }
+    
+    .inline-linkedin {
+      height: 1em;
+      width: auto;
+      vertical-align: middle;
+      margin: 0 0.2rem;
+      display: inline-block;
+    }
+    
+    .split-section {
+      display: flex;
+      gap: 2rem;
+      padding: 2rem 1rem;
+    }
+    
+    .left-column, .right-column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+    
+    .image-container {
+      width: 80%;
+      max-width: 400px;
+    }
+    
+    .image-container img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    
+    .image-container p {
+      text-align: center;
+      margin-top: 0.5rem;
+      color: #300019;
+      font-weight: bold;
+    }
+    
+    .image-link {
+      display: block;
+      text-decoration: none;
+    }
+    
+    .image-link:hover img {
+      box-shadow: 0 0 20px 5px rgba(48, 0, 25, 0.6);
+      transform: scale(1.02);
     }
 
     .dashboard-container {
@@ -27,7 +156,7 @@
     .page-wrapper {
       display: flex;
       justify-content: center;
-      padding: 2rem 1rem;
+      padding: 0.5rem 0.5rem;
     }
     
     .dashboard-wrapper {
@@ -53,7 +182,9 @@
 <body>
   <header>
     <h1>Final Bill Recoveries Dashboard</h1>
-    <p>Interactive Tableau Visualization</p>
+    <p>Interactive Tableau Visualization - Analysis Below</p>
+    <a href="../../../../index.html" class="home-button">Home</a>
+    <a href="https://www.linkedin.com/in/damian-oconnor" class="linkedin-button"><img src="../../../../Common_Images/LinkedIn_logo.png" alt="Contact me"></a>
   </header>
 
   <div class="page-wrapper">  
@@ -64,5 +195,39 @@
       </iframe>
     </div>  
   </div>
+  <div class="content-wrapper">
+    <div class="intro-text">
+      <h4>Brief description</h4>
+      <p>This utilities collections dashboard shows the outstanding bills once a customer leaves the utility, generating a ‘final bill’. They are classified into:<br>
+		Standard – their name and address are known<br>
+		Skip Trace – their name is known, but their forwarding address is not.<br>
+		The Occupier – when a standard customer has left the property and the new consumer has not provided their information for billing, generating a build up of debt. The supply is either terminated or transferred to a new supplier. Bills remain in an unnamed state.<br>
+		Probate – customers who are deceased and the estate is going through the probate process.
+	  </p>
+      <h4>Points to note</h4>
+      <p>Each of the customer types listed above have been split into low, medium or high value, aside from probate, where the approximate banding can be seen by looking at the average bill amount.
+	  <br>
+		 The report date is September 2025
+	  </p>
+      <h4>Brief analysis overview</h4>
+      <p>Using ‘December 2024’ as a basis for analysis:</p>
+      <ul>
+        <li>Immediately it is clear from the graph that even with 9 months of collections activity, the recoveries are significantly low across all Debt Groups, suggesting a complete revamp in processes and activity is required. A blended recovery rate of just 6.9% is obtained on a total debt of £11.8M from December 2024 bills. The majority of this lies in the high value groups, particularly Skip Trace with virtually all of its £3.9M remaining outstanding after 9 months. This equates to almost £50M per year in debt to be written off. A recommendation would be to embed specialised teams within the company to perform enhanced tracing of customers, or outsource to dedicated companies.</li>
+        
+        <li>Moving to the Recoveries sheet (top right button), the debt types remain reasonably stable month on month, Oct 24 experienced a delay in billing, which pushed Nov 24 higher. Only March and May 2025 see a rise in debt amount, partly by an increase in Probate accounts and high value Skip Trace and Occupier. Further analysis is required on the high value groups to understand the reason. Perhaps it is winter consumption that has been accumulated and a final bill has been generated at that point.</li>
+        
+        <li>Viewing the Balance Band page, we can see how each debt group’s outstanding bill has recovered over the available time frame. The target has been set as an average over the previous 12 months of collections activity.</li>
+        
+        <li>Looking at the ‘Standard – Low’ group, October 2024 bills have 11 months of recoveries, with a final recovery rate of 23.3% (6% below target in month 11) and May 2025 has 4 months of recoveries and achieved 26.5% (4.6% over the month 4 target). This shows an improvement in recoveries for this group.</li>
+		  
+        <li>Compare this to the Skip Trace – High group, where the early months are all generally performing well below expectations, however from month 4 and 5 an improvement is seen, whereby the recoveries are exceeding the previous benchmark. This does show improvements from previous years, but there is still a lot of work to be done in this area.</li>
+        
+      </ul>
+	  <br>
+		Deeper analysis, including time series analysis, early warning of churn/payment stress/default, use of credit bureau data to inform decisions and payment behaviour, among others, can be obtained by contacting me directly: <a href="https://www.linkedin.com/in/damian-oconnor" class="inline-linkedin-link"><img src="../../../Common_Images/LinkedIn_logo.png" alt="Contact me" class="inline-linkedin"></a>.</li>
+
+    </div>
+  </div>
+  
 </body>
 </html>
