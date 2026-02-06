@@ -52,6 +52,34 @@
       background-color: rgba(255, 255, 255, 0.2);
     }
   
+    .linkedin-button {
+      position: absolute;
+      top: 50%;
+      left: 1rem;
+      transform: translateY(-50%);
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border: 2px solid white;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .linkedin-button:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    /* Size the LinkedIn logo in header to match button height */
+    .linkedin-button img {
+      height: 1.2rem;
+      width: auto;
+      display: block;
+    }
+	  
     .content-wrapper {
       max-width: 800px;
       margin: 0 auto;
@@ -59,8 +87,26 @@
     }
     
     .intro-text {
-      text-align: center;
+      text-align: left;
       margin-bottom: 3rem;
+    }
+    
+    /* Style for bullet points */
+    .intro-text ul {
+      margin-top: 1rem;
+      line-height: 1.8;
+    }
+    
+    .intro-text li {
+      margin-bottom: 1rem;
+    }
+    
+    /* Inline LinkedIn logo in text */
+    .inline-linkedin {
+      height: 1em;
+      width: auto;
+      vertical-align: middle;
+      margin: 0 0.2rem;
     }
     
     .split-section {
@@ -114,6 +160,7 @@
     <h1>CRM Strategy Regional Dashboard</h1>
     <p>Marketing/Email Engagement/Profiling</p>
     <a href="../../index.html" class="home-button">Home</a>
+    <a href="https://www.linkedin.com/in/damian-oconnor" class="linkedin-button"><img src="../../Common_Images/LinkedIn_logo.png" alt="Contact me"></a>
   </header>
   
   <div class="content-wrapper">
@@ -124,15 +171,18 @@
       <p>Each customer segment has subsegments to better profile the base, either by value, frequency of booking, or both.</p>
       <h4>Brief analysis overview</h4>
       <p>Using June 2024 as a basis for analysis:</p>
-		The Infrequent population (within the ‘Inactive/Infrequent’ segment) account for 32% of the total revenue across the base, yet 45% are barely contacted by email, suggesting a ripe audience to convert into frequent bookers, particularly when 28.8% of this group book for business.
-	  <br>
-		Also, there is low membership take-up with 59.3%, compared to the high value infrequent at 87.9%, suggesting a campaign to drive customers to join the membership scheme, highlighting its benefits, would be ideal.
-	  <br>
-		Looking at the ‘Established’ population for the UK & Ireland (click the map or the filter), 91.9% of High Value Frequent customers book for business only, suggesting an opportunity to market directly to them with leisure offers, to increase currently unrealised revenue and expanding brand loyalty throughout their family. This group responds well to emails, with 76.3% having medium to high email engagement.
-	  <br>
-		Within the ‘Recover’ segment, the Lapsing customers, who haven’t made a booking in the last 3 months, appear to be retirees or people who have changed job, given 95.6% are business only bookings and 91.6% are in the highest membership tiers, 3 and 4. Since they are responsive to email and have accumulated significant loyalty points, where 53.5% are in tiers 3 and 4 for loyalty, there is an opportunity to target them with campaigns suited for leisure, particularly suggesting offers using the points as a draw.
-	  <br>
-		Deeper analysis, including incremental revenue on bookings, cost per click, customer lifetime value and seasonality, among others, can be obtained by contacting me directly: <a href="https://www.linkedin.com/in/damian-oconnor" class="image-link"><img src="../../Common_Images/LinkedIn_logo.png" alt="Contact me"></a>.
+      <ul>
+        <li>The Infrequent population (within the 'Inactive/Infrequent' segment) account for 32% of the total revenue across the base, yet 45% are barely contacted by email, suggesting a ripe audience to convert into frequent bookers, particularly when 28.8% of this group book for business.</li>
+        
+        <li>Also, there is low membership take-up with 59.3%, compared to the high value infrequent at 87.9%, suggesting a campaign to drive customers to join the membership scheme, highlighting its benefits, would be ideal.</li>
+        
+        <li>Looking at the 'Established' population for the UK & Ireland (click the map or the filter), 91.9% of High Value Frequent customers book for business only, suggesting an opportunity to market directly to them with leisure offers, to increase currently unrealised revenue and expanding brand loyalty throughout their family. This group responds well to emails, with 76.3% having medium to high email engagement.</li>
+        
+        <li>Within the 'Recover' segment, the Lapsing customers, who haven't made a booking in the last 3 months, appear to be retirees or people who have changed job, given 95.6% are business only bookings and 91.6% are in the highest membership tiers, 3 and 4. Since they are responsive to email and have accumulated significant loyalty points, where 53.5% are in tiers 3 and 4 for loyalty, there is an opportunity to target them with campaigns suited for leisure, particularly suggesting offers using the points as a draw.</li>
+     </ul> 
+	 <br>    
+        Deeper analysis, including incremental revenue on bookings, cost per click, customer lifetime value and seasonality, among others, can be obtained by contacting me directly: <a href="https://www.linkedin.com/in/damian-oconnor" class="image-link"><img src="../../Common_Images/LinkedIn_logo.png" alt="Contact me" class="inline-linkedin"></a>.
+
     </div>
   </div>
   
