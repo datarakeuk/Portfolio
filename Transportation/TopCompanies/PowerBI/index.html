@@ -12,11 +12,140 @@
       background-color: #FAF8F9;
     }
 
-    header {
-      padding: 1rem;
+     header {
+      padding: 0.25rem 0.25rem;
       text-align: center;
       background: #300019;
       color: white;
+      position: relative;
+    }
+    header h1 {
+      margin: 0.25rem 0;
+    }
+    header h4 {
+      margin: 0.25rem 0;
+    }
+    
+    header a {
+      color: white;
+      text-decoration: underline;
+    }
+    
+    header a:hover {
+      color: #f0f0f0;
+    }
+    
+    .home-button {
+      position: absolute;
+      top: 50%;
+      right: 1rem;
+      transform: translateY(-50%);
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border: 2px solid white;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    
+    .home-button:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  
+    .linkedin-button {
+      position: absolute;
+      top: 50%;
+      left: 1rem;
+      transform: translateY(-50%);
+      text-decoration: none;
+      display: block;
+    }
+    
+    /* Size the LinkedIn logo in header to match Home button height */
+    .linkedin-button img {
+      height: 2.2rem;
+      width: auto;
+      display: block;
+    }
+	  
+    .content-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0.5rem 1rem;
+    }
+    
+    .intro-text {
+      text-align: left;
+      margin-bottom: 3rem;
+    }
+    
+    /* Style for bullet points */
+    .intro-text ul {
+      margin-top: 1rem;
+      line-height: 1.8;
+    }
+    
+    .intro-text li {
+      margin-bottom: 1rem;
+    }
+    
+    /* Inline LinkedIn logo in text */
+    .inline-linkedin-link {
+      display: inline;
+      text-decoration: none;
+    }
+    
+    .inline-linkedin {
+      height: 1em;
+      width: auto;
+      vertical-align: middle;
+      margin: 0 0.2rem;
+      display: inline-block;
+    }
+    
+    .split-section {
+      display: flex;
+      gap: 2rem;
+      padding: 2rem 1rem;
+    }
+    
+    .left-column, .right-column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+    
+    .image-container {
+      width: 80%;
+      max-width: 400px;
+    }
+    
+    .image-container img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    
+    .image-container p {
+      text-align: center;
+      margin-top: 0.5rem;
+      color: #300019;
+      font-weight: bold;
+    }
+    
+    .image-link {
+      display: block;
+      text-decoration: none;
+    }
+    
+    .image-link:hover img {
+      box-shadow: 0 0 20px 5px rgba(48, 0, 25, 0.6);
+      transform: scale(1.02);
     }
 
     .dashboard-container {
@@ -27,7 +156,7 @@
     .page-wrapper {
       display: flex;
       justify-content: center;
-      padding: 2rem 1rem;
+      padding: 0.5rem 0.5rem;
     }
     
     .dashboard-wrapper {
@@ -53,10 +182,12 @@
 <body>
   <header>
     <h1>Top Companies Dashboard</h1>
-    <p>Interactive Power BI Visualization</p>
+    <p>Interactive Power BI Visualization - Analysis Below</p>
+    <a href="../../../index.html" class="home-button">Home</a>
+    <a href="https://www.linkedin.com/in/damian-oconnor" class="linkedin-button"><img src="../../../Common_Images/LinkedIn_logo.png" alt="Contact me"></a>
   </header>
-
-  <div class="page-wrapper">  
+  
+<div class="page-wrapper">  
     <div class="dashboard-wrapper">
       <iframe
        src="https://app.powerbi.com/view?r=eyJrIjoiMjhkMzM5YjItNTQ3OC00Y2IzLTg3MGUtOWYwMjIzOGQ2MjA0IiwidCI6Ijc3NWRjN2U0LWI1YjktNDMzZi1iMWI1LTZhZjQ2NDQ1ZDBjNSJ9&pageName=be49826b4636147dd90f" 
@@ -65,5 +196,30 @@
       </iframe>
     </div>  
   </div>
+  
+  <div class="content-wrapper">
+    <div class="intro-text">
+      <h4>Brief description</h4>
+      <p>This logistics dashboard shows the top 20 companies’ bookings and revenue over different time periods, showing their routes and activity against the average.</p>
+      <h4>Points to note</h4>
+      <p>The list of companies has been taken from the Forbes Top 100 list and in no way represents their actual activities. Clicking on a company name will highlight their routes on the map. The ‘Country of Company’ represents the global headquarters for the company.</p>
+      <h4>Brief analysis overview</h4>
+      <p>Using ‘Last Month’ as a basis for analysis:</p>
+      <ul>
+        <li>Walmart dominates the revenue in the last month, with over 42% more than the next highest company transporting goods, Saudi Aramaco.</li>
+        
+        <li>Apple is the 3rd highest in revenue, yet one of the lowest in bookings. When looking further, by moving to the Overview page, Apple typically has 7.5 containers per booking, compared to the 1.7 or 1.4 of Walmart and Saudi Amaraco respectively. This does suggest further investigation is required to ensure it is not a data issue and if there are ways to leverage this further, as a small upsell per container, results in larger revenue overall.</li>
+        
+        <li>Improved targeting of European companies is recommended, where in the last 12 months very few companies have spent $20M or more, with Germany outperforming all other European countries, having 8 companies doing so, compared to the USA with 32.</li>
+		  
+        <li>Oil & Gas and Automotive companies are high revenue customers, particularly with the latter and their Just In Time requirements on vehicle parts, reducing their need for local expensive storage.</li>
+        
+      </ul>
+	  <br>
+		Deeper analysis, including seasonality, year on year, forecasting, propensity modelling and operational efficiencies, among others, can be obtained by contacting me directly: <a href="https://www.linkedin.com/in/damian-oconnor" class="inline-linkedin-link"><img src="../../../Common_Images/LinkedIn_logo.png" alt="Contact me" class="inline-linkedin"></a>.</li>
+
+    </div>
+  </div>
+  
 </body>
 </html>
