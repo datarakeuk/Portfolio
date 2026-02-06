@@ -11,8 +11,8 @@
       font-family: Arial, sans-serif;
       background-color: #FAF8F9;
     }
-    
-    header {
+
+     header {
       padding: 0.25rem 0.25rem;
       text-align: center;
       background: #300019;
@@ -25,8 +25,130 @@
     header h4 {
       margin: 0.25rem 0;
     }
+    
+    header a {
+      color: white;
+      text-decoration: underline;
+    }
+    
+    header a:hover {
+      color: #f0f0f0;
+    }
+    
+    .home-button {
+      position: absolute;
+      top: 50%;
+      right: 1rem;
+      transform: translateY(-50%);
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border: 2px solid white;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    
+    .home-button:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  
+    .linkedin-button {
+      position: absolute;
+      top: 50%;
+      left: 1rem;
+      transform: translateY(-50%);
+      text-decoration: none;
+      display: block;
+    }
+    
+    /* Size the LinkedIn logo in header to match Home button height */
+    .linkedin-button img {
+      height: 2.2rem;
+      width: auto;
+      display: block;
+    }
+	  
+    .content-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0.5rem 1rem;
+    }
+    
+    .intro-text {
+      text-align: left;
+      margin-bottom: 3rem;
+    }
+    
+    /* Style for bullet points */
+    .intro-text ul {
+      margin-top: 1rem;
+      line-height: 1.8;
+    }
+    
+    .intro-text li {
+      margin-bottom: 1rem;
+    }
+    
+    /* Inline LinkedIn logo in text */
+    .inline-linkedin-link {
+      display: inline;
+      text-decoration: none;
+    }
+    
+    .inline-linkedin {
+      height: 1em;
+      width: auto;
+      vertical-align: middle;
+      margin: 0 0.2rem;
+      display: inline-block;
+    }
+    
+    .split-section {
+      display: flex;
+      gap: 2rem;
+      padding: 2rem 1rem;
+    }
+    
+    .left-column, .right-column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+    
+    .image-container {
+      width: 80%;
+      max-width: 400px;
+    }
+    
+    .image-container img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    
+    .image-container p {
+      text-align: center;
+      margin-top: 0.5rem;
+      color: #300019;
+      font-weight: bold;
+    }
+    
+    .image-link {
+      display: block;
+      text-decoration: none;
+    }
+    
+    .image-link:hover img {
+      box-shadow: 0 0 20px 5px rgba(48, 0, 25, 0.6);
+      transform: scale(1.02);
+    }
 
-    .dashboard-container { /* can be deleted */
+    .dashboard-container {
       width: 100%;
       height: calc(100vh - 80px);
     }
@@ -34,7 +156,7 @@
     .page-wrapper {
       display: flex;
       justify-content: center;
-      padding: 2rem 1rem;
+      padding: 0.5rem 0.5rem;
     }
     
     .dashboard-wrapper {
@@ -54,41 +176,48 @@
       height: 100%;
       border: none;
     }
-    
-    .home-button {
-      position: absolute;
-      top: 50%;
-      right: 1rem;
-      transform: translateY(-50%);
-      color: white;
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-      border: 2px solid white;
-      border-radius: 4px;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
-    .home-button:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-    }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>Outbound Dialler Performance</h1>
-    <h4>Interactive <b>Tableau</b> Visualization</h4>
-    (All data has been semi-randomly generated based on domain knowledge)
+    <h1>Outbound Dialler Performance Dashboard</h1>
+    <p>Interactive Tableau Visualization - Analysis Below</p>
     <a href="../../../../index.html" class="home-button">Home</a>
+    <a href="https://www.linkedin.com/in/damian-oconnor" class="linkedin-button"><img src="../../../../Common_Images/LinkedIn_logo.png" alt="Contact me"></a>
   </header>
 
   <div class="page-wrapper">  
     <div class="dashboard-wrapper">
       <iframe
-         src="https://public.tableau.com/views/Outbound_Dialler_Operational_Performance_Tableau/Dashboard-Overall?:showVizHome=no&:embed=true"
+        src="https://public.tableau.com/views/Outbound_Dialler_Operational_Performance_Tableau/Dashboard-Overall?:showVizHome=no&:embed=true"
         allowfullscreen>
       </iframe>
     </div>  
   </div>
+  <div class="content-wrapper">
+    <div class="intro-text">
+      <h4>Brief description</h4>
+      <p>This outbound collections dialler dashboard shows the operational metrics needed to adjust dialler priorities and manage resource scheduling. Dialling commences following the missed due date on the bill.</p>
+      <h4>Points to note</h4>
+      <p>The dialler list has been split into priority by low, medium or high value debt. The average balance for each group that week is shown to understand value groupings better. </p>
+      <h4>Brief analysis overview</h4>
+      <p>Using ‘6th January 2025’ as a basis for analysis:</p>
+      <ul>
+        <li>Overall, the dialler file volume is split by 43.9% High Value and 48% Medium value, with the remaining 8.1% being Low Value debt. However, 60.7% of the outstanding debt lies in the High Value list, with 37.2% in the Medium Value list and the remaining 2% is low value. This shows that the focus should always be to prioritise High Value where possible and move to Medium Value once the list has been saturated.</li>
+        
+        <li>Friday shows a low volume of connections overall, however the account holder was reached 39.5% of all connections made that day, more than any other day that week. Drilling down slightly, this was primarily due to High Value account holders being reached that day, more than any other. For Medium Value accounts, the peak day was Wednesday with 41.4% right party contact.</li>
+        
+        <li>Looking at the 8-week view (arrow top right), the volume of existing records (i.e. those without a positive outcome over the previous rolling 2 weeks) remains stable week on week, indicating that dialler activity (and other communication formats, including self-cure) only covers the new volume of debt accounts each week. This does not mean only new debt is resolved, just that the mix of new and existing is not eaten into. While it is a good sign that the debt is being managed, it shows that improvement can be made to start reducing the outstanding debt customers. Further analysis into those not contacted or not paying within 2 weeks after the bill due date should be considered.</li>
+        
+        <li>Moving to the final page, hourly performance, looking at Monday’s activity of high value debt, very high RPC rates can be seen for this week and last week in the pre 10am period, compared to the evening. Given the volume dialled in the morning is low compared to the evening, this suggests increasing the dialling for this list and bringing in extra staff should be considered, since it is peak hours and will have the greatest impact on the contact made. The low value list should not even be dialled during this time.</li>
+        
+      </ul>
+	  <br>
+		Deeper analysis, including time series analysis, early warning of churn/payment stress/default, use of credit bureau data to inform decisions, payment behaviour, among others, can be obtained by contacting me directly: <a href="https://www.linkedin.com/in/damian-oconnor" class="inline-linkedin-link"><img src="../../../Common_Images/LinkedIn_logo.png" alt="Contact me" class="inline-linkedin"></a>.</li>
+
+    </div>
+  </div>
+  
 </body>
 </html>
