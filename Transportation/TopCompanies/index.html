@@ -52,6 +52,22 @@
       background-color: rgba(255, 255, 255, 0.2);
     }
   
+    .linkedin-button {
+      position: absolute;
+      top: 50%;
+      left: 1rem;
+      transform: translateY(-50%);
+      text-decoration: none;
+      display: block;
+    }
+    
+    /* Size the LinkedIn logo in header to match Home button height */
+    .linkedin-button img {
+      height: 2.2rem;
+      width: auto;
+      display: block;
+    }
+	  
     .content-wrapper {
       max-width: 800px;
       margin: 0 auto;
@@ -59,8 +75,32 @@
     }
     
     .intro-text {
-      text-align: center;
+      text-align: left;
       margin-bottom: 3rem;
+    }
+    
+    /* Style for bullet points */
+    .intro-text ul {
+      margin-top: 1rem;
+      line-height: 1.8;
+    }
+    
+    .intro-text li {
+      margin-bottom: 1rem;
+    }
+    
+    /* Inline LinkedIn logo in text */
+    .inline-linkedin-link {
+      display: inline;
+      text-decoration: none;
+    }
+    
+    .inline-linkedin {
+      height: 1em;
+      width: auto;
+      vertical-align: middle;
+      margin: 0 0.2rem;
+      display: inline-block;
     }
     
     .split-section {
@@ -113,27 +153,44 @@
   <header>
     <h1>Top Companies Dashboard</h1>
     <p>Transport/Logistics/CRM/Financial</p>
-    <a href="../../index.html" class="home-button">Home</a>
+    <a href="../index.html" class="home-button">Home</a>
+    <a href="https://www.linkedin.com/in/damian-oconnor" class="linkedin-button"><img src="../Common_Images/LinkedIn_logo.png" alt="Contact me"></a>
   </header>
   
   <div class="content-wrapper">
     <div class="intro-text">
-      <h2>Welcome to My Portfolio</h2>
-      <p>This area is reserved for a brief description of the visual.</p>
-      <p>This area is reserved for a brief analysis of the visual.</p>
+      <h4>Brief description</h4>
+      <p>This logistics dashboard shows the top 20 companies’ bookings and revenue over different time periods, showing their routes and activity against the average.</p>
+      <h4>Points to note</h4>
+      <p>The list of companies has been taken from the Forbes Top 100 list and in no way represents their actual activities. Clicking on a company name will highlight their routes on the map. The ‘Country of Company’ represents the global headquarters for the company.</p>
+      <h4>Brief analysis overview</h4>
+      <p>Using ‘Last Month’ as a basis for analysis:</p>
+      <ul>
+        <li>Walmart dominates the revenue in the last month, with over 42% more than the next highest company transporting goods, Saudi Aramaco.</li>
+        
+        <li>Apple is the 3rd highest in revenue, yet one of the lowest in bookings. When looking further, by moving to the Overview page, Apple typically has 7.5 containers per booking, compared to the 1.7 or 1.4 of Walmart and Saudi Amaraco respectively. This does suggest further investigation is required to ensure it is not a data issue and if there are ways to leverage this further, as a small upsell per container, results in larger revenue overall.</li>
+        
+        <li>Improved targeting of European companies is recommended, where in the last 12 months very few companies have spent $20M or more, with Germany outperforming all other European countries, having 8 companies doing so, compared to the USA with 32.</li>
+		  
+        <li>Oil & Gas and Automotive companies are high revenue customers, particularly with the latter and their Just In Time requirements on vehicle parts, reducing their need for local expensive storage.</li>
+        
+      </ul>
+	  <br>
+		Deeper analysis, including seasonality, year on year, forecasting, propensity modelling and operational efficiencies, among others, can be obtained by contacting me directly: <a href="https://www.linkedin.com/in/damian-oconnor" class="inline-linkedin-link"><img src="../Common_Images/LinkedIn_logo.png" alt="Contact me" class="inline-linkedin"></a>.</li>
+
     </div>
   </div>
   
   <div class="split-section">
     <div class="left-column">
       <div class="image-container">
-	  <p>Access the live interactive Tableau Dashboard</p>
+	  <p>Access the interactive Tableau Dashboard</p>
         <a href="./Tableau/index.html" class="image-link">
-          <img src="../../Common_Images/Tableau_logo.png" alt="Tableau Logo">
+          <img src="../Common_Images/Tableau_logo.png" alt="Tableau Logo">
         </a>
         <p>Click to view</p>
       </div>
-      <div class="image-container">
+       <div class="image-container">
         <img src="./Images/TopCompanies_Tableau_1.png" alt="Top 20">
         <p>Top 20 Companies</p>
       </div>
@@ -145,9 +202,9 @@
     
     <div class="right-column">
       <div class="image-container">
-	  <p>Access the live interactive Power BI Dashboard</p>
+	  <p>Access the interactive Power BI Dashboard</p>
         <a href="./PowerBI/index.html" class="image-link">
-          <img src="../../Common_Images/Power_BI_logo.png" alt="Power BI Logo">
+          <img src="../Common_Images/Power_BI_logo.png" alt="Power BI Logo">
         </a>
         <p>Click to view</p>
       </div>
